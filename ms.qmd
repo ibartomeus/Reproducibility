@@ -1,0 +1,40 @@
+---
+title: "My big project about biodiversity"
+author: "I. Bartomeus"
+format: html
+editor: visual
+---
+
+## Intro:
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+You can write using the Visual editor, or the Source script in [Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
+
+In this case, we want to create a simple dynamic report, but more complex webpages can be build (e.g. <https://ibartomeus.github.io/CropPollinationModels/>)
+
+## Steps:
+
+### Read data
+
+We will use here as an example fake data store in `/data`
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#| label: read and plot data
+#| echo: true
+#| warning: false
+
+#read data
+dat <- read.csv("data/example_dataset.csv")
+
+#plot data
+plot(dat$abundance ~ dat$size, las = 1)
+```
+
+Note that we want to show both the code and the output, so we tagged `echo: true`. The `echo: false` option disables the printing of code (only output is displayed). We don't want to see any warning (`false`).
+
+## What next?
+
+You can type [equations](https://quarto.org/docs/visual-editor/technical.html), add [references](https://quarto.org/docs/authoring/citations.html), integrate [reference managers](https://academicnext.wordpress.com/2024/07/28/top-10-reference-managers-for-quarto-by-rstudio-posit/), etc...
