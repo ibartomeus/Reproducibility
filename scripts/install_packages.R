@@ -1,4 +1,4 @@
-#this script install all packges used in the workshop
+#this script install all packages used in the workshop
 
 install.packages("readr")
 install.packages("renv")
